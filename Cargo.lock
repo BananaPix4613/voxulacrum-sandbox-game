@@ -2090,6 +2090,7 @@ dependencies = [
 [[package]]
 name = "nodegraph-editor"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "egui",
  "egui-snarl",
@@ -2102,6 +2103,7 @@ dependencies = [
 [[package]]
 name = "nodegraph-eval"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "fastnoise-lite",
  "glam",
@@ -2115,6 +2117,7 @@ dependencies = [
 [[package]]
 name = "nodegraph-hotreload"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "env_logger",
  "glam",
@@ -2131,6 +2134,7 @@ dependencies = [
 [[package]]
 name = "nodegraph-ir"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "glam",
  "serde",
@@ -3737,6 +3741,7 @@ dependencies = [
 [[package]]
 name = "voxel-core"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "glam",
  "ron",
@@ -3749,6 +3754,7 @@ dependencies = [
 [[package]]
 name = "voxulacrum"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "voxulacrum-app",
 ]
@@ -3756,6 +3762,7 @@ dependencies = [
 [[package]]
 name = "voxulacrum-app"
 version = "0.4.2"
+source = "git+https://github.com/BananaPix4613/voxulacrum#a365b6b1f629c6a6e561e56720d35ffad48404fb"
 dependencies = [
  "bevy_ecs",
  "bincode",
