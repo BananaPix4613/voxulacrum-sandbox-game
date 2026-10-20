@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check:
+    # Windows, like the engine's CI: winit needs X11/Wayland development headers
+    # to build on Linux.
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      # There is no .cargo/config.toml here (it is gitignored), so this builds
+      # against the engine's git dependency rather than a local checkout.
+      - name: Build
+        run: cargo build --release
+
+      # The game may depend on the voxulacrum facade and on no other engine
+      # crate. The engine-crate list comes from the engine workspace itself.
+      - name: Install boundary-check
+        run: cargo install --git https://github.com/BananaPix4613/voxulacrum boundary-check
+
+      - name: Facade dependency check
+        run: boundary-check --manifest-path Cargo.toml
+
+      - name: Validate graphs
+        run: cargo run --release -- --validate-graphs
+
+      - name: Verify generation
+        run: cargo run --release -- --verify-generation 64

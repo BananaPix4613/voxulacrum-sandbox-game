@@ -1,0 +1,24 @@
+[package]
+name = "voxbox"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Voxbox, a prototype game on the voxulacrum engine"
+
+[dependencies]
+# The engine, through its facade alone; CI checks that with boundary-check.
+# During co-development, .cargo/config.toml patches this to a local engine
+# checkout (see .cargo/config.example.toml).
+voxulacrum = { git = "https://github.com/BananaPix4613/voxulacrum" }
+
+# The engine's own profiles: world generation is unusably slow unoptimized.
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

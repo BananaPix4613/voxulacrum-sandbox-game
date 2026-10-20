@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "world": "world.graph.json",
+  "sea_level": 24,
+  "seed": 54321,
+  "zones": [
+    {
+      "id": 0,
+      "graph": "zone.graph.json"
+    },
+    {
+      "id": 1,
+      "graph": "zone_highlands.graph.json"
+    }
+  ],
+  "biomes": [
+    {
+      "id": 0,
+      "graph": "biome_meadow.graph.json",
+      "detail": "biome_meadow.detail.json",
+      "params": {
+        "traversal_smoothing_distance": 1.0
+      }
+    },
+    {
+      "id": 1,
+      "graph": "biome_rocky.graph.json",
+      "detail": "biome_rocky.detail.json",
+      "params": {
+        "traversal_smoothing_distance": 0.0
+      }
+    },
+    {
+      "id": 2,
+      "graph": "biome_ocean.graph.json",
+      "detail": "biome_ocean.detail.json",
+      "params": {}
+    }
+  ]
+}

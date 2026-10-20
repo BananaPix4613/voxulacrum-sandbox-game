@@ -1,0 +1,12 @@
+// Voxbox: a prototype game that starts as a copy of the engine's sandbox world.
+// Its id is also its namespace (`voxbox:granite`) and its save directory
+// (`saves/voxbox/`).
+(
+    id: "voxbox",
+    version: "0.1.0",
+    kind: Game,
+    engine: "^0.4",
+    world: "graphs/world.manifest.json",
+    dependencies: [],
+    modules: [],
+)

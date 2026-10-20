@@ -1,0 +1,105 @@
+{
+  "kind": "Zone",
+  "boundary": {
+    "inputs": [],
+    "outputs": []
+  },
+  "nodes": [
+    {
+      "value": null,
+      "version": 0
+    },
+    {
+      "value": {
+        "kind": {
+          "type": "GraphRef",
+          "target": "World"
+        },
+        "position": [
+          0.0,
+          0.0
+        ]
+      },
+      "version": 1
+    },
+    {
+      "value": {
+        "kind": {
+          "type": "ZoneOutput",
+          "biome_bands": [
+            0.0,
+            0.25
+          ],
+          "biome_ids": [
+            0,
+            1,
+            0
+          ]
+        },
+        "position": [
+          240.0,
+          0.0
+        ]
+      },
+      "version": 1
+    },
+    {
+      "value": {
+        "kind": {
+          "type": "PlaceStructure",
+          "blueprint": "monolith",
+          "cell_size": 96,
+          "density": 0.35,
+          "seed": 3,
+          "random_yaw": true,
+          "surface_offset": 1,
+          "biomes": []
+        },
+        "position": [
+          -7.470797,
+          -265.04147
+        ]
+      },
+      "version": 1
+    },
+    {
+      "value": {
+        "kind": {
+          "type": "PlaceTree",
+          "species": "oak",
+          "wood": "wood",
+          "cell_size": 8,
+          "density": 0.65,
+          "seed": 1,
+          "age": 1.0,
+          "biomes": [
+            0
+          ]
+        },
+        "position": [
+          233.83255,
+          -266.1181
+        ]
+      },
+      "version": 1
+    }
+  ],
+  "edges": [
+    {
+      "from": {
+        "node": {
+          "idx": 1,
+          "version": 1
+        },
+        "pin": 0
+      },
+      "to": {
+        "node": {
+          "idx": 2,
+          "version": 1
+        },
+        "pin": 0
+      }
+    }
+  ]
+}

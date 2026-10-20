@@ -1,0 +1,8 @@
+# Copy this file to .cargo/config.toml to build against a local engine checkout
+# instead of the git dependency. That copy is gitignored: it is per machine, and
+# CI must always build against the git dependency.
+#
+# The path is relative to this repository's root and assumes the engine is
+# checked out beside it, as ../voxulacrum.
+[patch."https://github.com/BananaPix4613/voxulacrum"]
+voxulacrum = { path = "../voxulacrum/crates/voxulacrum" }
